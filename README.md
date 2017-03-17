@@ -17,8 +17,7 @@ To run the app locally, clone this repository and `cd` into its directory:
 
 1. First clone this repository and `cd` into its directory:
    ```
-   git clone git@github.com:TwilioDevEd/block-spam-calls-node.git
-
+   git clone https://github.com/TwilioDevEd/block-spam-calls-node.git
    cd block-spam-calls-node
    ```
 
@@ -30,9 +29,9 @@ To run the app locally, clone this repository and `cd` into its directory:
 
 1. Run the application.
 
-  ```
-  $ npm start
-  ```
+    ```
+    npm start
+    ```
 
 To actually forward incoming calls, your development server will need to be publicly accessible. [We recommend using ngrok to solve this problem](https://www.twilio.com/blog/2015/09/6-awesome-reasons-to-use-ngrok-when-testing-webhooks.html).
 
@@ -41,10 +40,6 @@ Once you have started ngrok, update your TwiML app's voice URL setting to use yo
 ```
 http://88b37ada.ngrok.io/
 ```
-
-1. Check it out at [http://localhost:3000](http://localhost:3000)
-
-That's it
 
 ## Run the tests
 
