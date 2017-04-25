@@ -1,14 +1,14 @@
 'use strict';
 var express = require('express');
 var bodyParser  = require("body-parser");
-var twilio = require('twilio');
+var VoiceResponse = require('twilio/lib/twiml/VoiceResponse');
 var dig = require('node-dig');
 var app = express();
 
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.post('/', function (req, res) {
-  var twiml = new twilio.TwimlResponse();
+  var twiml = new VoiceResponse();
   var blockCalls = false;
 
   if ('AddOns' in req.body) {
