@@ -1,7 +1,7 @@
 'use strict';
 var express = require('express');
 var bodyParser  = require("body-parser");
-var VoiceResponse = require('twilio/lib/twiml/VoiceResponse');
+var VoiceResponse = require('twilio').twiml.VoiceResponse;
 var dig = require('node-dig');
 var app = express();
 
