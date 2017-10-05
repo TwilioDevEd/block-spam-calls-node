@@ -5,11 +5,14 @@
   "main": "index.js",
   "scripts": {
     "start": "node app.js",
-    "test": "export NODE_ENV=test && ./node_modules/mocha/bin/mocha test"
+    "test": "NODE_ENV=test ./node_modules/.bin/mocha *.spec.js "
   },
   "author": {
     "name": "Twilio Developer Education Team",
     "email": "deved-oss@twilio.com"
+  },
+  "engines": {
+    "node": ">= 8.0"
   },
   "license": "MIT",
   "keywords": [
@@ -22,12 +25,16 @@
   ],
   "dependencies": {
     "body-parser": "^1.18.2",
-    "chai": "^4.1.2",
-    "chai-http": "^3.0.0",
-    "chai-string": "^1.4.0",
     "express": "^4.16.1",
-    "mocha": "^4.0.0",
     "node-dig": "^1.0.1",
     "twilio": "^3.7.0"
+  },
+  "devDependencies": {
+    "chai-string": "^1.4.0",
+    "chai": "^4.1.2",
+    "mocha": "^4.0.0",
+    "supertest": "^3.0.0",
+    "xmldom": "^0.1.27",
+    "xpath.js": "^1.0.7"
   }
 }
