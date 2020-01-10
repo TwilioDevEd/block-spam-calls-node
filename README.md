@@ -8,6 +8,9 @@ Status](https://travis-ci.org/TwilioDevEd/block-spam-calls-node.svg?branch=maste
 
 Learn how to use Twilio add-ons to block spam calls.
 
+Follow the beginning of the [Block Spam Calls and RoboCalls guide](https://www.twilio.com/docs/voice/tutorials/block-spam-calls-and-robocalls-python) to learn how to add the spam filtering add-ons.
+
+
 ## Local development
 
 First you need to install either [Node.js](http://nodejs.org/), which
