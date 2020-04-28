@@ -16,7 +16,8 @@ function App(){
     var blockCalls = false;
 
     const addOns = 'AddOns' in req.body && JSON.parse(req.body['AddOns']);
-    if (addOns && addOns['status'] === 'successful') {        var results = addOns['results'];
+    if (addOns && addOns['status'] === 'successful') {
+      var results = addOns['results'];
       blockCalls = should_be_blocked_by_marchex(results['marchex_cleancall']) ||
         should_be_blocked_by_nomorobo(results['nomorobo_spamscore']) ||
         should_be_blocked_by_whitepages(results['whitepages_pro_phone_rep']);

@@ -3,8 +3,7 @@
 </a>
 
 # Block Spam Calls. Powered by Twilio - Node.js/Express
-[![Build
-Status](https://travis-ci.org/TwilioDevEd/block-spam-calls-node.svg?branch=master)](https://travis-ci.org/TwilioDevEd/block-spam-calls-node)
+![](https://github.com/TwilioDevEd/browser-calls-node/workflows/Node.js/badge.svg)
 
 > We are currently in the process of updating this sample template. If you are encountering any issues with the sample, please open an issue at [github.com/twilio-labs/code-exchange/issues](https://github.com/twilio-labs/code-exchange/issues) and we'll try to help you.
 
@@ -57,5 +56,6 @@ npm test
 ## Meta
 
 * No warranty expressed or implied. Software is as is. Diggity.
+* The CodeExchange repository can be found [here](https://github.com/twilio-labs/code-exchange/).
 * [MIT License](http://www.opensource.org/licenses/mit-license.html)
 * Lovingly crafted by Twilio Developer Education.
