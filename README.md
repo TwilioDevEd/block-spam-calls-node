@@ -11,6 +11,25 @@ Learn how to use Twilio add-ons to block spam calls.
 
 Follow the beginning of the [Block Spam Calls and RoboCalls guide](https://www.twilio.com/docs/voice/tutorials/block-spam-calls-and-robocalls-python) to learn how to add the spam filtering add-ons.
 
+### Create a TwiML App
+
+This project is configured to use a **TwiML App**, which allows us to easily set the voice URLs for all Twilio phone numbers we purchase in this app.
+
+To create a new TwiML app click [here](https://www.twilio.com/console/voice/twiml/apps).
+
+![](images/create-twiml-app.png)
+
+### Install Add-ons
+
+The following guide will help you to [install Add-ons](https://www.twilio.com/docs/add-ons/install). You can access the Add-ons in the twilio console [here](https://www.twilio.com/console/add-ons). The Spam Filtering Add-ons that are used on this application are:
+- Ekata Phone Validation
+- Marchex Clean Call
+- Nomorobo Spam Score
+
+Once you've selected the Add-on, just click on `Install` button. Then, you will see a pop-up window where you should read and agree the terms, then, click the button `Agree & Install`. For this application, you just need to handle the incoming voice calls, so make sure the `Incoming Voice Call` box for `Use In` is checked and click `Save`
+
+![](images/install-add-on.png)
+
 
 ## Local development
 
