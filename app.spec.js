@@ -28,11 +28,11 @@ describe('/ POST', () => {
       });
   });
 
-  it('should be successful with whitepages on / POST', () => {
+  it('should be successful with ekata phone valitadion on / POST', () => {
     return request(server)
       .post('/')
       .set('content-type', 'application/x-www-form-urlencoded')
-      .send({'AddOns': JSON.stringify(require('./fixtures/successful_whitepages.json'))})
+      .send({'AddOns': JSON.stringify(require('./fixtures/successful_ekata.json'))})
       .expect(200)
       .expect('Content-Type', 'text/xml')
       .then((response) => {
@@ -40,11 +40,11 @@ describe('/ POST', () => {
       });
   });
 
-  it('should be blocked with whitepages on / POST', () => {
+  it('should be blocked with ekata phone valitadion on / POST', () => {
     return request(server)
       .post('/')
       .set('content-type', 'application/x-www-form-urlencoded')
-      .send({'AddOns': JSON.stringify(require('./fixtures/spam_whitepages.json'))})
+      .send({'AddOns': JSON.stringify(require('./fixtures/spam_ekata.json'))})
       .expect(200)
       .expect('Content-Type', 'text/xml')
       .then((response) => {

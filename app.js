@@ -16,10 +16,11 @@ function App(){
     var blockCalls = false;
 
     const addOns = 'AddOns' in req.body && JSON.parse(req.body['AddOns']);
-    if (addOns && addOns['status'] === 'successful') {        var results = addOns['results'];
+    if (addOns && addOns['status'] === 'successful') {
+      var results = addOns['results'];
       blockCalls = should_be_blocked_by_marchex(results['marchex_cleancall']) ||
         should_be_blocked_by_nomorobo(results['nomorobo_spamscore']) ||
-        should_be_blocked_by_whitepages(results['whitepages_pro_phone_rep']);
+        should_be_blocked_by_ekata(results['ekata_phone_valid']);
     }
 
     if (blockCalls) {
@@ -41,13 +42,13 @@ function App(){
     return dig(nomorobo, ['result', 'score']) == 1;
   }
 
-  var should_be_blocked_by_whitepages = function(whitepages) {
+  var should_be_blocked_by_ekata = function(ekata) {
     debugger
-    if (!whitepages || whitepages['status'] !== 'successful') {
+    if (!ekata || ekata['status'] !== 'successful') {
       return false;
     }
 
-    return whitepages.result.reputation_level >= 4
+    return ekata.result.reputation_level >= 4
   }
 
   var should_be_blocked_by_marchex = function(marchex) {

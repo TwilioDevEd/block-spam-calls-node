@@ -3,14 +3,32 @@
 </a>
 
 # Block Spam Calls. Powered by Twilio - Node.js/Express
-[![Build
-Status](https://travis-ci.org/TwilioDevEd/block-spam-calls-node.svg?branch=master)](https://travis-ci.org/TwilioDevEd/block-spam-calls-node)
+![](https://github.com/TwilioDevEd/browser-calls-node/workflows/Node.js/badge.svg)
 
 > We are currently in the process of updating this sample template. If you are encountering any issues with the sample, please open an issue at [github.com/twilio-labs/code-exchange/issues](https://github.com/twilio-labs/code-exchange/issues) and we'll try to help you.
 
 Learn how to use Twilio add-ons to block spam calls.
 
 Follow the beginning of the [Block Spam Calls and RoboCalls guide](https://www.twilio.com/docs/voice/tutorials/block-spam-calls-and-robocalls-python) to learn how to add the spam filtering add-ons.
+
+### Create a TwiML App
+
+This project is configured to use a **TwiML App**, which allows us to easily set the voice URLs for all Twilio phone numbers we purchase in this app.
+
+To create a new TwiML app click [here](https://www.twilio.com/console/voice/twiml/apps).
+
+![](images/create-twiml-app.png)
+
+### Install Add-ons
+
+The following guide will help you to [install Add-ons](https://www.twilio.com/docs/add-ons/install). You can access the Add-ons in the Twilio console [here](https://www.twilio.com/console/add-ons). The Spam Filtering Add-ons that are used on this application are:
+- [Ekata Phone Validation](https://showcase.twilio.com/s/partner-listing/a8E1W00000097QEUAY)
+- [Marchex Clean Call](https://showcase.twilio.com/s/partner-listing/a8E1W00000097QxUAI)
+- [Nomorobo Spam Score](https://showcase.twilio.com/s/partner-listing/a8E1W00000097R7UAI)
+
+Once you've selected the Add-on, just click on `Install` button. Then, you will see a pop-up window where you should read and agree the terms, then, click the button `Agree & Install`. For this application, you just need to handle the incoming voice calls, so make sure the `Incoming Voice Call` box for `Use In` is checked and click `Save`
+
+![](images/install-add-on.png)
 
 
 ## Local development
@@ -57,5 +75,6 @@ npm test
 ## Meta
 
 * No warranty expressed or implied. Software is as is. Diggity.
+* The CodeExchange repository can be found [here](https://github.com/twilio-labs/code-exchange/).
 * [MIT License](http://www.opensource.org/licenses/mit-license.html)
 * Lovingly crafted by Twilio Developer Education.
