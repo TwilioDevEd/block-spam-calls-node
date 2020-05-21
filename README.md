@@ -7,9 +7,21 @@
 
 > We are currently in the process of updating this sample template. If you are encountering any issues with the sample, please open an issue at [github.com/twilio-labs/code-exchange/issues](https://github.com/twilio-labs/code-exchange/issues) and we'll try to help you.
 
-Learn how to use Twilio add-ons to block spam calls.
+## About
+
+Learn how to use Twilio add-ons to block spam calls with Nodejs.
 
 Follow the beginning of the [Block Spam Calls and RoboCalls guide](https://www.twilio.com/docs/voice/tutorials/block-spam-calls-and-robocalls-python) to learn how to add the spam filtering add-ons.
+
+| .NET | Java | Python | PHP | Ruby |
+| :--- | :--- | :----- | :-- | :--- |
+| [Done](https://github.com/TwilioDevEd/block-spam-calls-csharp) | [Done](https://github.com/TwilioDevEd/block-spam-calls-java)  | [Done](https://github.com/TwilioDevEd/block-spam-calls-python)  | [Done](https://github.com/TwilioDevEd/block-spam-calls-php) | [Done](https://github.com/TwilioDevEd/block-spam-calls-ruby)  |
+
+## Set up
+
+### Requirements
+
+- [Nodejs](https://nodejs.org/) v10 or v12
 
 ### Create a TwiML App
 
@@ -33,48 +45,70 @@ Once you've selected the Add-on, just click on `Install` button. Then, you will 
 
 ## Local development
 
-First you need to install either [Node.js](http://nodejs.org/), which
-should also install [npm](https://www.npmjs.com/).
-
-To run the app locally, clone this repository and `cd` into its directory:
-
-1. First clone this repository and `cd` into its directory:
+1. First, clone this repository and `cd` into its directory.
    ```
    git clone https://github.com/TwilioDevEd/block-spam-calls-node.git
    cd block-spam-calls-node
    ```
 
-1. Install dependencies:
+2. Install dependencies.
 
-    ```
-    npm install
-    ```
+   ```bash
+   npm install
+   ```
 
-1. Run the application.
+3. Run the application, will run on port 3000.
 
-    ```
-    npm start
-    ```
+   ```bash
+   npm start
+   ```
 
-To actually forward incoming calls, your development server will need to be publicly accessible. [We recommend using ngrok to solve this problem](https://www.twilio.com/blog/2015/09/6-awesome-reasons-to-use-ngrok-when-testing-webhooks.html).
+4. To actually forward incoming calls, your development server will need to be publicly accessible. [We recommend using ngrok to solve this problem](https://www.twilio.com/blog/2015/09/6-awesome-reasons-to-use-ngrok-when-testing-webhooks.html).
 
-Once you have started ngrok, update your TwiML app's voice URL setting to use your ngrok hostname, so it will look something like this:
+   ```bash
+   ngrok http 3000
+   ```
 
-```
-http://88b37ada.ngrok.io/
-```
+5. Once you have started [ngrok](https://ngrok.com/download), update your TwiML app's Voice URL setting to use your ngrok hostname, so it will look something like this:
+
+   ```
+   http://88b37ada.ngrok.io/
+   ```
+
+   See [Create a TwiML App](#create-a-twiml-app) to set the Voice URL.
 
 ## Run the tests
 
 You can run the tests locally by typing
 
-```
+```bash
 npm test
 ```
 
-## Meta
+### Cloud deployment
 
-* No warranty expressed or implied. Software is as is. Diggity.
-* The CodeExchange repository can be found [here](https://github.com/twilio-labs/code-exchange/).
-* [MIT License](http://www.opensource.org/licenses/mit-license.html)
-* Lovingly crafted by Twilio Developer Education.
+Additionally to trying out this application locally, you can deploy it to a variety of host services. Here is a small selection of them.
+
+Please be aware that some of these might charge you for the usage or might make the source code for this application visible to the public. When in doubt research the respective hosting service first.
+
+| Service                           |                                                                                                                                                                                                                           |
+| :-------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [Heroku](https://www.heroku.com/) | [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)                                                                                                                                       |
+
+## Resources
+
+- The CodeExchange repository can be found [here](https://github.com/twilio-labs/code-exchange/).
+
+## Contributing
+
+This template is open source and welcomes contributions. All contributions are subject to our [Code of Conduct](https://github.com/twilio-labs/.github/blob/master/CODE_OF_CONDUCT.md).
+
+## License
+
+[MIT](http://www.opensource.org/licenses/mit-license.html)
+
+## Disclaimer
+
+No warranty expressed or implied. Software is as is.
+
+[twilio]: https://www.twilio.com
