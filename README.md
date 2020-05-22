@@ -75,9 +75,7 @@ Once you've selected the Add-on, just click on `Install` button. Then, you will 
    http://88b37ada.ngrok.io/
    ```
 
-   See [Create a TwiML App](#create-a-twiml-app) to set the Voice URL.
-
-   Finally, click on `Call` to test your application. See Create a TwiML App to set the Voice URL.
+   Finally, click on `Call` to test your application. See [Create a TwiML App](#create-a-twiml-app) to set the Voice URL.
 
    ![](images/create-twiml-call-button.png)
 
