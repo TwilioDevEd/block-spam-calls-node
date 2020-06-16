@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node app.js",
-    "test": "NODE_ENV=test ./node_modules/.bin/mocha *.spec.js "
+    "test": "./node_modules/.bin/mocha *.spec.js --exit"
   },
   "author": {
     "name": "Twilio Developer Education Team",
